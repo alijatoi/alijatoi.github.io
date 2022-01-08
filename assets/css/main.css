@@ -13,8 +13,9 @@ body {
     padding: 0;
     font-size: 100%;
     line-height: 1.5;
-    color: #555;
-    font-family: 'Nunito Sans', sans-serif
+    color: #c5c5c5;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: rgb(5 6 13);
 }
 
 article,
@@ -4798,7 +4799,7 @@ strong {
     margin-top: 1em;
     padding-top: 1em;
     line-height: 1.25;
-    color: #333
+    color: #e3e3e3;
 }
 
 h2 {
