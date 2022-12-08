@@ -3980,7 +3980,8 @@ template {
 }
 
 .devicon-java-plain-wordmark:before {
-    content: "\e841"
+    content: "\e841",
+        color:white
 }
 
 .devicon-java-plain:before {
