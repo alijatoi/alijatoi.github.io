@@ -1,3 +1,3 @@
 ### Portfolio Website 
-#### Check Live at alijatoi.github.io
+#### Check Website at https://alijatoi.live/
 
