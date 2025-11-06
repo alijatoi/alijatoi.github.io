@@ -1,323 +1,496 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Metadata of the Webpage -->
-    <!-- Character-set Metadata -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Viewport Metadata -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Description Metadata-->
-    <meta name="description" content="Portfolio Website" />
-    <!-- Author Metadata -->
-    <meta name="author" content="Aditya Vikram Singh" />
-    <!-- Keyword Metadata -->
-    <meta
-      name="keywords"
-      content="Aditya Singh, Aditya Vikram Singh, Aditya Vikram Singh DPS,
-        Aditya Vikram Singh DPSRKP, Aditya Vikram Singh UMass, Aditya Vikram
-        Singh UMass Amherst, Aditya Vikram Singh New Delhi, Aditya Vikram
-        Singh Amherst, Aditya Vikram Singh ISSDC, Aditya Vikram Singh NASA,
-        Aditya Vikram Singh, Aditya Vikram Singh Website, Aditya V Singh"
-    />
-    <!-- Webpage Logo -->
-    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
-    <!-- Webpage Title -->
-    <title>Ali Hassan</title>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALI HASSAN - Junior .NET Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9; /* Slate 100 */
+            color: #334155; /* Slate 700 */
+        }
+        .accent-color {
+            color: #10b981; /* Emerald 500 */
+        }
+        .accent-bg {
+            background-color: #10b981;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0; /* Slate 200 */
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+        }
+        .lang-btn.active {
+            color: #0f172a; /* Slate 900 */
+        }
 
-    <!-- Import CSS: Main Stylesheet -->
-    <link rel="stylesheet" href="./assets/css/main.css" />
-  </head>
+        /* --- Timeline Styling --- */
+        .timeline-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
 
-  <body>
-    <div id="particles-js">
-      <div class="header">
-        <h1>
-          <span class="site-title">Ali Hassan</span>
-          <span class="site-description"> Associate Mobile Application Developer </span>
+        /* Die vertikale Linie */
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #cbd5e1; /* slate-300 */
+            top: 10px;
+            bottom: 10px;
+            left: 50%;
+            margin-left: -2px;
+        }
 
-          
-        </h1>
-        <div class="header-icons">
-       
-          
-          <a aria-label="My LinkedIn Profile" target="_blank" href="https://www.linkedin.com/in/hasandev/">
-            <i class="icon fa fa-linkedin" aria-hidden="true"></i>
-          </a>
-          <a aria-label="My Github Profile" target="_blank" href="https://github.com/alijatoi/">
-            <i class="icon fa fa-github-alt" aria-hidden="true"></i>
-          </a>
-          <a aria-label="My Twitter" target="_blank" href="https://twitter.com/engr_speaks/">
-            <i class="icon fa fa fa-twitter" aria-hidden="true"></i>
-          </a>
-          <a aria-label="My Résumé" target="_blank" href="#">
-            <i class="icon fa fa fa-file-pdf-o" aria-hidden="true"></i>
-          </a>
-        </a>
+        /* Timeline-Item */
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        /* Der Punkt auf der Timeline */
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: #ffffff; /* white */
+            border: 4px solid #10b981; /* accent-bg */
+            top: 28px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* Linkes Item */
+        .timeline-left {
+            left: 0;
+        }
+
+        /* Rechtes Item */
+        .timeline-right {
+            left: 50%;
+        }
+
+        /* Punkt für rechtes Item anpassen */
+        .timeline-right::after {
+            left: -10px;
+        }
+
+        /* Der Karten-Inhalt */
+        .timeline-content {
+            padding: 24px;
+            background-color: #ffffff;
+            position: relative;
+            border-radius: 0.75rem; /* card style */
+            border: 1px solid #e2e8f0; /* slate-200 */
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            transition: all 0.3s ease;
+        }
+        .timeline-content:hover {
+             transform: translateY(-3px);
+             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+        }
+
+        /* Responsives Design für Timeline */
+        @media screen and (max-width: 768px) {
+            .timeline-container::after {
+                left: 21px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 15px;
+            }
+            
+            .timeline-left, .timeline-right {
+                left: 0%;
+            }
+            
+            .timeline-left::after, .timeline-right::after {
+                left: 11px; /* (21-10) */
+            }
+        }
+        /* --- Ende Timeline Styling --- */
+
+    </style>
+</head>
+<body class="antialiased selection:bg-emerald-500 selection:text-white">
+
+    <!-- Header & Navigation (unverändert) -->
+    <header id="header" class="bg-slate-100/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-xl font-bold accent-color">ALI HASSAN</a>
+            <div class="flex items-center">
+                <nav class="hidden md:flex items-center space-x-6 text-sm">
+                    <a href="#about" class="text-slate-600 hover:accent-color transition-colors" data-translate-key="navAbout">About</a>
+                    <a href="#skills" class="text-slate-600 hover:accent-color transition-colors" data-translate-key="navSkills">Skills</a>
+                    <a href="#experience" class="text-slate-600 hover:accent-color transition-colors" data-translate-key="navExperience">Experience</a>
+                    <a href="#contact" class="text-slate-600 hover:accent-color transition-colors" data-translate-key="navContact">Contact</a>
+                </nav>
+                <!-- Language Switcher -->
+                <div id="language-switcher" class="hidden md:flex items-center ml-6 border-l border-slate-300 pl-6">
+                    <button class="lang-btn active text-sm font-semibold" data-lang="en">EN</button>
+                    <span class="mx-1 text-slate-300">/</span>
+                    <button class="lang-btn text-slate-500 text-sm font-semibold" data-lang="de">DE</button>
+                </div>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu" class="h-6 w-6 text-slate-600"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu (unverändert) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <a href="#about" class="block text-center py-3 px-4 text-sm text-slate-600 hover:accent-color transition-colors" data-translate-key="navAboutMobile">About</a>
+            <a href="#skills" class="block text-center py-3 px-4 text-sm text-slate-600 hover:accent-color transition-colors" data-translate-key="navSkillsMobile">Skills</a>
+            <a href="#experience" class="block text-center py-3 px-4 text-sm text-slate-600 hover:accent-color transition-colors" data-translate-key="navExperienceMobile">Experience</a>
+            <a href="#contact" class="block text-center py-3 px-4 text-sm text-slate-600 hover:accent-color transition-colors" data-translate-key="navContactMobile">Contact</a>
+             <div class="flex justify-center items-center py-3 border-t border-slate-200">
+                <button class="lang-btn active text-sm font-semibold" data-lang="en">EN</button>
+                <span class="mx-2 text-slate-400">/</span>
+                <button class="lang-btn text-slate-500 text-sm font-semibold" data-lang="de">DE</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto max-w-4xl px-6">
+
+        <!-- Hero Section (unverändert) -->
+        <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center">
+            <img src="https://profile-images.xing.com/images/0b0563aa168e220840d42e01ece9ce19-2/ali-hassan-jatoi.256x256.jpg" alt="ALI HASSAN" class="w-32 h-32 rounded-full mb-6 border-4 border-white shadow-md">
+            <h1 class="text-4xl md:text-6xl font-bold text-slate-800" data-translate-key="heroTitle">Hi, I'm ALI HASSAN</h1>
+            <p class="mt-4 text-lg md:text-xl text-slate-600 max-w-2xl" data-translate-key="heroSubtitle">A passionate <span class="accent-color font-semibold">.NET Developer</span> based in Bielefeld, crafting scalable and efficient web applications.</p>
+            <div class="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#contact" class="inline-block accent-bg text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:opacity-90 transition-opacity" data-translate-key="heroBtnContact">Get in Touch</a>
+                <a href="#experience" class="inline-block bg-white text-slate-700 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-slate-50 transition-colors border border-slate-200" data-translate-key="heroBtnExperience">View My Experience</a>
+            </div>
+        </section>
+
+        <!-- About Section (unverändert) -->
+        <section id="about" class="py-24 scroll-mt-16">
+            <h2 class="text-3xl font-bold text-center text-slate-800 mb-4" data-translate-key="aboutTitle">About Me</h2>
+            <div class="w-20 h-1 accent-bg mx-auto mb-12"></div>
+            <div class="text-center text-slate-600 max-w-3xl mx-auto space-y-4">
+                <p data-translate-key="aboutP1">I'm a junior software developer and working student at Phoenix Contact, based in Germany. With a foundation in C# and the .NET ecosystem, I also have practical experience in Python, TypeScript, Angular and cloud technologies like Azure and AWS.</p>
+                <p data-translate-key="aboutP2">I am passionate about building scalable applications, solving real-world problems through code, and am actively looking for new opportunities to contribute to a forward-thinking development team.</p>
+            </div>
+        </section>
+
+       <section id="skills" class="py-24 scroll-mt-16">
+  <h2 class="text-3xl font-bold text-center text-slate-800 mb-4" data-translate-key="skillsTitle">Core Technologies</h2>
+  <div class="w-20 h-1 accent-bg mx-auto mb-12"></div>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+    <!-- Template for each skill -->
+    <!-- C# -->
+    <div class="text-center group">
+      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110 p-2">
+        <svg class="w-full h-full" viewBox="0 0 128 128" fill="currentColor" role="img" aria-label="C# logo">
+          <path d="M62.2 23.3c-2.3 0-4.5.1-6.8.3-6.2.6-11.8 2.2-16.9 4.8-5.1 2.6-9.5 6.1-13.1 10.5-3.7 4.4-6.4 9.6-8.2 15.5-1.8 5.9-2.7 12.4-2.7 19.5 0 7.1.9 13.6 2.7 19.5 1.8 5.9 4.5 11.1 8.2 15.5 3.6 4.4 8 7.9 13.1 10.5 5.1 2.6 10.7 4.2 16.9 4.8 2.3.2 4.5.3 6.8.3 4.6 0 8.9-.4 13-1.3 5.4-1.1 10.3-3.2 14.6-6.1 4.3-3 7.9-6.8 10.7-11.4 2.8-4.6 4.7-9.9 5.6-15.8.5-3 .7-6 .7-9.1v-8.8c0-3-.2-6-.7-9-.9-5.9-2.8-11.2-5.6-15.8-2.8-4.6-6.4-8.5-10.7-11.4-4.3-3-9.2-5-14.6-6.1-4.1-.9-8.4-1.3-13-1.3z"/>
+        </svg>
+      </div>
+      <h3 class="font-semibold text-slate-700">C#</h3>
+    </div>
+
+    <!-- .NET Core -->
+    <div class="text-center group">
+      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110">
+        <i data-lucide="box" class="w-7 h-7"></i>
+      </div>
+      <h3 class="font-semibold text-slate-700">.NET Core</h3>
+    </div>
+
+    <!-- ASP.NET Core -->
+    <div class="text-center group">
+      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110">
+        <i data-lucide="server" class="w-7 h-7"></i>
+      </div>
+      <h3 class="font-semibold text-slate-700">ASP.NET Core</h3>
+    </div>
+
+    <!-- Python -->
+    <div class="text-center group">
+      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110 p-2">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="Python logo">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+        </svg>
+      </div>
+      <h3 class="font-semibold text-slate-700">Python</h3>
+    </div>
+
+    <!-- Microsoft Azure -->
+    <div class="text-center group">
+      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110">
+        <i data-lucide="cloud" class="w-7 h-7"></i>
+      </div>
+      <h3 class="font-semibold text-slate-700">Microsoft Azure</h3>
+    </div>
+
+    <!-- API Development -->
+    <div class="text-center group">
+      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110">
+        <i data-lucide="arrow-right-left" class="w-7 h-7"></i>
+      </div>
+      <h3 class="font-semibold text-slate-700" data-translate-key="skillApiDev">API Development</h3>
+    </div>
+
+    <!-- Relational Databases -->
+    <div class="text-center group">
+      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110">
+        <i data-lucide="database" class="w-7 h-7"></i>
+      </div>
+      <h3 class="font-semibold text-slate-700" data-translate-key="skillDatabases">Relational Databases</h3>
+    </div>
+
+    <!-- Docker -->
+    <div class="text-center group">
+      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110">
+        <i data-lucide="container" class="w-7 h-7"></i>
+      </div>
+      <h3 class="font-semibold text-slate-700">Docker</h3>
+    </div>
+
+    <!-- Azure DevOps -->
+    <div class="text-center group">
+      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110">
+        <i data-lucide="git-merge" class="w-7 h-7"></i>
+      </div>
+      <h3 class="font-semibold text-slate-700" data-translate-key="skillAzureDevOps">Azure DevOps</h3>
+    </div>
+
+    <!-- Angular -->
+    <div class="text-center group">
+      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110 p-2">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="Angular logo">
+          <path d="M12 2L3 4.5v12.5l9 4.5l9-4.5V4.5L12 2z"/>
+        </svg>
+      </div>
+      <h3 class="font-semibold text-slate-700">Angular</h3>
+    </div>
+
+    <!-- TypeScript -->
+    <div class="text-center group">
+      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110 p-2">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="TypeScript logo">
+          <path d="M21 5H3c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2z"/>
+        </svg>
+      </div>
+      <h3 class="font-semibold text-slate-700">TypeScript</h3>
+    </div>
+
+    <!-- HTML & CSS -->
+    <div class="text-center group">
+      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110">
+        <i data-lucide="code" class="w-7 h-7"></i>
+      </div>
+      <h3 class="font-semibold text-slate-700">HTML & CSS</h3>
+    </div>
+  </div>
+</section>
+
         
-      
-        </div>
-        <div class="header-links">
-          <a class="link" href="#about" data-scroll>About Me</a>
-          <a class="link" href="#projects" data-scroll>Projects</a>
-        </div>
-      </div>
-      <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
-    </div>
+        <!-- === Experience Section (Timeline Layout) === -->
+        <section id="experience" class="py-24 scroll-mt-16">
+            <h2 class="text-3xl font-bold text-center text-slate-800 mb-4" data-translate-key="experienceTitle">Work Experience</h2>
+            <div class="w-20 h-1 accent-bg mx-auto mb-12"></div>
+            
+            <div class="timeline-container">
+                
+                <!-- Item 1: Phoenix Contact -->
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-content">
+                        <h3 class="text-xl font-bold text-slate-800 mb-1" data-translate-key="exp1Title">Werkstudent / Junior Software Developer</h3>
+                        <p class="text-md font-semibold text-slate-600 mb-3" data-translate-key="exp1Subtitle">Phoenix Contact Gruppe (Oct 2023 - Present)</p>
+                        <p class="text-slate-600" data-translate-key="exp1Desc">Developing and integrating applications for PLC controllers using C#/.NET and Python (Flask). Building frontend components with TypeScript, HTML, and CSS. Ensuring data communication, testing, and deployment.</p>
+                    </div>
+                </div>
 
-    
-    <!-- About Section -->
-    <section id="about">
-      <!-- User Introduction-->
-      <div class="user-details">
-        <h1>About Me</h1>
-        <picture>
-          <source
-            type="image/jpeg"
-            srcset="./assets/img/jpg/PPpp.jpg"
-            alt="Professional Me"
-            width="20%"
-            style="border-radius: 50%"
-          />
-          <img
-            src="./assets/img/jpg/PPpp.jpg"
-            alt="Professional Me"
-            width="20%"
-            style="border-radius: 50%"
-            class="w3-image"
-          />
-        </picture>
-        <p class="ex3">
-         
-           I use my software engineering skills for cross platform app development, mostly for Mobile. <br> Currently, based in Germany.
-           
-        </p>
-      </div>
-      </section>
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="user-details">
-      <h1>Featured Projects</h1>
-    </div>
+                <!-- Item 2: HSL Construction -->
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-content">
+                         <h3 class="text-xl font-bold text-slate-800 mb-1" data-translate-key="exp2Title">Junior Software Engineer</h3>
+                        <p class="text-md font-semibold text-slate-600 mb-3" data-translate-key="exp2Subtitle">HSL Construction Ltd (Nov 2021 - Sep 2023)</p>
+                        <p class="text-slate-600" data-translate-key="exp2Desc">Developed internal desktop apps (C#, .NET Framework, WinForms/WPF) for construction project management. Used Python (pandas, Flask) for scripts, data analysis, and automation. Utilized Git for version control.</p>
+                    </div>
+                </div>
 
-    <!-- User Project #1: Personal Résumé Website -->
-    <div class="user-projects">
-      <div class="images-right">
-        <picture>
-          <source type="image/webp" srcset="./assets/img/jpg/aas.jpeg" alt="NGO WEBSITE FOR" />
-          <img alt="Personal Website" src="./assets/img/jpg/aas.jpeg" />
-        </picture>
-      </div>
-      <div class="contents" style="text-align: center">
-        <h3> KIN News Media Web Application</h3>
-        <div>
-          <img
-            height="32"
-            width="32"
-          
-            src="https://unpkg.com/simple-icons@3.4.0/icons/react.svg"
-            style="filter: invert(73%) sepia(74%) saturate(1552%) hue-rotate(169deg) brightness(109%) contrast(97%)"
-          />
-          &nbsp;
-          <img
-          height="20"
-          width="45"
-          src="./assets/img/nodejs.svg"
-        />
-        &nbsp;
-          <img
-            height="32"
-            width="26"
-            src="https://unpkg.com/simple-icons@3.4.0/icons/bootstrap.svg"
-            style="filter: invert(24%) sepia(14%) saturate(2270%) hue-rotate(222deg) brightness(102%) contrast(90%)"
-          />
-          &nbsp;
-          <img height="60" width="80"
-           src=".\assets\img\heroku.png" />
-        </div>
-        <p style="text-align: justify">
-          I designed and developed this web app using ReactJS and Bootstrap in Frontend and Node.Js, PHP as Backend & MongoDB as Database, Used AWS Cloud for Images and Videos Storage, Hosted on HerouKu.
-          Additionally Developed Admin Panel so that Admin can regularly Add, Edit or Update & Delete the Posts, News including Images & Videos of the Website.
-        </p>
-        <a class="project-link" target="_blank" href="http://www.kinnewsmedia.com/">Check it out!</a>
-      </div>
-    </div>
-    &nbsp;
-    &nbsp;
-    <!-- User Project #2: Summer 2020 Project -->
-    <div class="user-projects">
-      <div class="images-left">
-        <picture>
-          <source type="image/webp" srcset="./assets/img/jpg/kiswo.jpeg" alt="Perpetual Crusades" />
-          <img alt="Perpetual Crusades" src="./assets/img/jpg/kiswo.jpeg" />
-        </picture>
-      </div>
-      <div class="contents-right" style="text-align: center">
-        <h3>Khidmat Insaniat NGO Website</h3>
-        <img
-          height="32"
-          width="32"
-          src="https://unpkg.com/simple-icons@3.4.0/icons/react.svg"
-          style="filter: invert(73%) sepia(74%) saturate(1552%) hue-rotate(169deg) brightness(109%) contrast(97%)"
-        />
-        &nbsp;
-          <img
-            height="32"
-            width="30"
-            src="https://unpkg.com/simple-icons@3.4.0/icons/bootstrap.svg"
-            style="filter: invert(24%) sepia(14%) saturate(2270%) hue-rotate(222deg) brightness(102%) contrast(90%)"
-          />
-        &nbsp;
-        <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/github.svg" />
-        <p style="text-align: justify">
-          I developed this website using BootStrap, ReactJS, Angular, NodeJs, Hosted on Github Pages and Connected with External Domain.
-        </p>
-        <br>
-        <br>
-        <a class="project-link" target="_blank" href="https://khidmatinsaniat.com"
-          >Check it out!</a
-        >
-      </div>
-    </div>
-    &nbsp;
-    &nbsp;
-    
-    <!-- User Project #3: COVID-19 Tracker App -->
-    <div class="user-projects">
-      <div class="images-right">
-        <picture>
-          <source type="image/webp" srcset="./assets/img/jpg/port.jpeg alt="Personal Portfolio}" />
-          <img alt="Personal Portfolio" src="./assets/img/jpg/port.jpeg" />
-        </picture>
-      </div>
-      <div class="contents" style="text-align: center">
-        <h3>Personal Portfolio</h3>
-        <div>
-          <img
-            height="32"
-            width="32"
-            src="https://unpkg.com/simple-icons@3.4.0/icons/javascript.svg"
-            style="filter: invert(96%) sepia(47%) saturate(4151%) hue-rotate(338deg) brightness(100%) contrast(95%)"
-          />
-          &nbsp;
-          <img
-          height="32"
-          width="32"
-          src="https://unpkg.com/simple-icons@3.4.0/icons/react.svg"
-          style="filter: invert(73%) sepia(74%) saturate(1552%) hue-rotate(169deg) brightness(109%) contrast(97%)"
-        />
-        &nbsp;
-        </div>
-        <p style="text-align: justify">
-          I created my personal portfolio website Using HTML, CSS Bootstrap Framework and JavaScript for Animations.
-        </p>
-        <a class="project-link" target="_blank" href="https://alijatoi.github.io">
-          Check it out!
-        </a>
-      </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
+                <!-- Item 3: Google DSC -->
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-content">
+                        <h3 class="text-xl font-bold text-slate-800 mb-1" data-translate-key="exp3Title">Google Developer Student Club Lead</h3>
+                        <p class="text-md font-semibold text-slate-600 mb-3" data-translate-key="exp3Subtitle">Google Inc. (Aug 2020 - Sep 2021)</p>
+                        <p class="text-slate-600" data-translate-key="exp3Desc">Led the university's Google Developer Student Club, helping to bridge the gap between theory and practice. Selected as the first and only lead from the entire university.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- === Ende Experience Section === -->
 
 
-    <!-- Use Project #4: Hand Written Digits Recognition Using Deep Learning -->
-    <div class="user-projects">
-      <div class="images-left">
-        <picture>
-          <source
-            type="image/webp"
-            srcset="./assets/img/jpg/hdigits.png"
-            alt="Hand Written Digits Recognition using Deep Learning "
-          />
-          <img alt="Valuto: Account Management System" src="./assets/img/jpg/hdigits.jpeg" />
-        </picture>
-      </div>
-      <div class="contents-right" style="text-align: center">
-        <h3>Handwritten Digit Recognition using Deep Learning</h3>
-        <div>
-          <img
-            height="32"
-            width="32"
-            src="https://unpkg.com/simple-icons@3.4.0/icons/python.svg"
-            style="filter: invert(22%) sepia(77%) saturate(1486%) hue-rotate(183deg) brightness(101%) contrast(103%)"
-          />
-        </div>
-        <p style="text-align: justify">
-          The handwritten digit recognition system developed using Deep Learning. handWritten digit recognition is the ability of computers to recognize human handwritten digits. It is a hard task for the
-           machine because handwritten digits are not perfect and can be made with many different flavors. The handwritten digit recognition 
-          is the solution to this problem which uses the image of a digit and recognizes the digit present in the image.
-        </p>
-        <a class="project-link" target="_blank" href="https://github.com/alijatoi/Handwritten-Digit-Recognition-using-Deep-Learning">
-          Check it out!
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <!-- User Introduction-->
-    <div class="user-details">
-      <h1>Core Skills</h1>
-   </div>
-      <!-- User Specifics -->
-      <div class="user">
+        <!-- Contact Section (unverändert) -->
+        <section id="contact" class="py-24 text-center scroll-mt-16">
+            <h2 class="text-3xl font-bold text-slate-800 mb-4" data-translate-key="contactTitle">Let's Connect</h2>
+            <div class="w-20 h-1 accent-bg mx-auto mb-8"></div>
+            <p class="max-w-xl mx-auto text-slate-600 mb-8" data-translate-key="contactDesc">I am actively looking for new opportunities and am open to projects. If you have a role in mind or just want to connect, feel free to reach out!</p>
+            <a href="mailto:jatoidata@gmail.com" class="text-lg accent-color font-semibold hover:underline">jatoidata@gmail.com</a>
+            <div class="mt-8 flex justify-center space-x-6">
+                <!-- Ersetze '#' mit deinen echten Profil-Links -->
+                <a href="https://github.com/alijatoi" class="text-slate-500 hover:accent-color transition-colors" aria-label="GitHub"><i data-lucide="github" class="w-7 h-7"></i></a>
+<a href="https://www.xing.com/profile/AliHassan_Jatoi/" class="text-slate-500 hover:accent-color transition-colors" aria-label="XING">
+  <img src="https://new-work.se/NWSE/Presse/2025/38534/image-thumb__38534__download_thumbnail/XING_iconmark_RGB_fullCol.2a80d238.png"
+       alt="XING logo"
+       class="w-7 h-7 inline-block" />
+</a>          </div>
+        </section>
         
-        <!-- Technology Stack #1: Languages -->
-        <div class="tech">
-          <h2>Programming Languages</h2>
-          <i class="devicon-python-plain colored"></i>
-          <i class="devicon-java-plain-wordmark colored"></i>
-          <i class="devicon-cplusplus-plain colored"></i>
-          <i class="devicon-javascript-plain colored"></i>
-          <p>My favorite languages for systems programming, software engineering, and data analysis.</p>
-        </div>
-
-        <!-- Technology Stack #2: Front-End -->
-        <div class="tech">
-          <h2>Front-End</h2>
-          <i class="devicon-react-original colored"></i>
-          <i class="devicon-bootstrap-plain-wordmark colored"></i>
-          <i class="devicon-html5-plain-wordmark colored"></i>
-          <i class="devicon-css3-plain-wordmark colored"></i>
-          <p class="ex1">My preferred technologies for front-end web development and component design.</p>
-        </div>
-
-        <!-- Technology Stack #3: Back-End -->
-        <div class="tech">
-          <h2>Back-End</h2>
-          <i class="devicon-nodejs-plain colored"></i>
-          <i class="devicon-express-original-wordmark white"></i>
-          <i class="devicon-mongodb-plain-wordmark colored"></i>
-          <p class="ex1">My preferred technologies for back-end web programming and database architecture.</p>
-        </div>
-
-        <!-- Technology Stack #4: Tools -->
-        <div class="tech">
-          <h2>Tools</h2>
-          <i class="devicon-git-plain-wordmark colored"></i>
-          <i class="devicon-visualstudio-plain colored"></i>
-          <i class="devicon-github-plain-wordmark white"></i>
-          <i class="devicon-docker-plain-wordmark colored"></i>
-          <p class="ex1">My favorite tools for version control, code editing, and container orchestration.</p>
-        </div>
-      </div>
-    </section>
-
-  
-
-    <footer class="footer">
-      <p>&copy; Ali Hassan, 2021</p>
+    </main>
+    
+    <!-- Footer (unverändert) -->
+    <footer class="text-center py-6 border-t border-slate-200">
+        <p class="text-sm text-slate-500" data-translate-key="footerText">&copy; 2024 ALI HASSAN. All Rights Reserved.</p>
     </footer>
 
-    <!-- Import JS: Particles Theme -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <!-- Import JS: Sweet Scroll -->
-    <script src="./assets/js/sweet-scroll.min.js"></script>
-    <!-- Import JS: Google Analytics -->
-    <script src="./assets/js/google-analytics.js"></script>
-    <!-- Import JS: Main Script -->
-    <script src="./assets/js/main.js"></script>
-  </body>
+    <!-- Script (unverändert) -->
+    <script>
+        lucide.createIcons();
+
+        // Language translations (unverändert)
+        const translations = {
+            en: {
+                navAbout: "About",
+                navSkills: "Skills",
+                navExperience: "Experience",
+                navContact: "Contact",
+                navAboutMobile: "About",
+                navSkillsMobile: "Skills",
+                navExperienceMobile: "Experience",
+                navContactMobile: "Contact",
+                heroTitle: "Hi, I'm ALI HASSAN",
+                heroSubtitle: 'A passionate <span class="accent-color font-semibold">Developer</span> based in Bielefeld, crafting scalable and efficient web applications.',
+                heroBtnContact: "Get in Touch",
+                heroBtnExperience: "View My Experience",
+                aboutTitle: "About Me",
+                aboutP1: "I'm a junior software developer and working student at Phoenix Contact, based in Germany. With a foundation in C# and the .NET ecosystem, I also have practical experience in Python, TypeScript, Angular and cloud technologies like Azure and AWS.",
+                aboutP2: "I am passionate about building scalable applications, solving real-world problems through code, and am actively looking for new opportunities to contribute to a forward-thinking development team.",
+                skillsTitle: "Core Technologies",
+                skillApiDev: "API Development",
+                skillDatabases: "Relational Databases",
+                skillAzureDevOps: "Azure DevOps",
+                experienceTitle: "Work Experience",
+                exp1Title: "Werkstudent / Junior Software Developer",
+                exp1Subtitle: "Phoenix Contact Gruppe (Oct 2023 - Present)",
+                exp1Desc: "Developing and integrating  applications / app-components for PLC controllers using C#/.NET and Python (Flask). Building frontend components with TypeScript, HTML, and CSS. Ensuring data communication, testing, and deployment.",
+                exp2Title: "Junior Software Engineer",
+                exp2Subtitle: "HSL Construction Ltd (Nov 2021 - Sep 2023)",
+                exp2Desc: "Developed internal desktop apps (C#, .NET Framework, WinForms/WPF) for construction project management. Used Python (pandas, Flask) for scripts, data analysis, and automation. Utilized Git for version control.",
+                exp3Title: "Google Developer Student Club Lead",
+                exp3Subtitle: "Google Inc. (Aug 2020 - Sep 2021)",
+                exp3Desc: "Led the university's Google Developer Student Club, helping to bridge the gap between theory and practice. Selected as the first and only lead from the entire university.",
+                contactTitle: "Let's Connect",
+                contactDesc: "I am actively looking for new opportunities and am open to projects. If you have a role in mind or just want to connect, feel free to reach out!",
+                footerText: "&copy; 2024 ALI HASSAN. All Rights Reserved."
+            },
+            de: {
+                navAbout: "Über Mich",
+                navSkills: "Fähigkeiten",
+                navExperience: "Berufserfahrung",
+                navContact: "Kontakt",
+                navAboutMobile: "Über Mich",
+                navSkillsMobile: "Fähigkeiten",
+                navExperienceMobile: "Berufserfahrung",
+                navContactMobile: "Kontakt",
+                heroTitle: "Hallo, ich bin ALI HASSAN",
+                heroSubtitle: 'Ein leidenschaftlicher <span class="accent-color font-semibold">Entwickler</span> aus Bielefeld, der skalierbare und effiziente Webanwendungen erstellt.',
+                heroBtnContact: "Kontakt aufnehmen",
+                heroBtnExperience: "Meine Erfahrung sehen",
+                aboutTitle: "Über Mich",
+                aboutP1: "Ich bin ein Junior-Softwareentwickler und Werkstudent bei Phoenix Contact, Deutschland. Mit einer soliden Grundlage in C# und dem .NET-Ökosystem habe ich auch praktische Erfahrung in Python, TypeScript, Angular und Cloud-Technologien wie Azure und AWS.",
+                aboutP2: "Ich brenne dafür, skalierbare Anwendungen zu entwickeln, reale Probleme durch Code zu lösen, und bin aktiv auf der Suche nach neuen Möglichkeiten, zu einem zukunftsorientierten Entwicklungsteam beizutragen.",
+                skillsTitle: "Kerntechnologien",
+                skillApiDev: "API-Entwicklung",
+                skillDatabases: "Relationale Datenbanken",
+                skillAzureDevOps: "Azure DevOps",
+                experienceTitle: "Berufserfahrung",
+                exp1Title: "Werkstudent / Junior Softwareentwickler",
+                exp1Subtitle: "Phoenix Contact Gruppe (Okt 2023 - Heute)",
+                exp1Desc: "Entwicklung und Integration von Anwendungen / Application-Components für PLC-Controller: Implementierung der Anwendungen C#/.NET Backend mit Python (Flask) und Schnittstellenintegration. Entwicklung von Frontend-Komponenten mit TypeScript/HTML, CSS.",
+                exp2Title: "Junior Software Engineer",
+                exp2Subtitle: "HSL Construction Ltd (Nov 2021 - Sep 2023)",
+                exp2Desc: "Entwicklung und Wartung interner Desktop-Anwendungen mit C# und .NET Framework. Einsatz von Python für Skripte, Datenanalyse und Automatisierung interner Prozesse (z.B. Berichterstellung, API-Integration).",
+                exp3Title: "Google Developer Student Club Lead",
+                exp3Subtitle: "Google Inc. (Aug 2020 - Sep 2021)",
+                exp3Desc: "Leitung des Google Developer Student Clubs der Universität, um die Lücke zwischen Theorie und Praxis zu überbrücken. Als erster und einziger Lead aus der gesamten Universität ausgewählt.",
+                contactTitle: "Lassen Sie uns verbinden",
+                contactDesc: "Ich bin derzeit auf der Suche nach neuen beruflichen Möglichkeiten und offen für Projekte. Wenn Sie eine passende Rolle im Sinn haben oder einfach Kontakt aufnehmen möchten, zögern Sie nicht, sich zu melden!",
+                footerText: "&copy; 2024 ALI HASSAN. Alle Rechte vorbehalten."
+            }
+        };
+
+           const langButtons = document.querySelectorAll('.lang-btn');
+
+    const changeLanguage = (lang) => {
+        document.documentElement.lang = lang;
+        const elements = document.querySelectorAll('[data-translate-key]');
+        elements.forEach(el => {
+            const key = el.getAttribute('data-translate-key');
+            if (translations[lang][key]) {
+                el.innerHTML = translations[lang][key];
+            }
+        });
+
+        // Update active button style
+        langButtons.forEach(btn => {
+            if (btn.dataset.lang === lang) {
+                btn.classList.add('active');
+                btn.classList.remove('text-slate-500');
+            } else {
+                btn.classList.remove('active');
+                btn.classList.add('text-slate-500');
+            }
+        });
+    };
+
+    langButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const selectedLang = e.target.dataset.lang;
+            changeLanguage(selectedLang);
+        });
+    });
+
+    const userLang = navigator.language || navigator.userLanguage;
+    const initialLang = userLang.startsWith('de') ? 'de' : 'en';
+    changeLanguage(initialLang);
+
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+</script>
+</body>
 </html>
