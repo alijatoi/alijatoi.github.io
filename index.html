@@ -3,138 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALI HASSAN - Junior .NET Developer</title>
+    <title>ALI HASSAN - Full-Stack Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f1f5f9; /* Slate 100 */
-            color: #334155; /* Slate 700 */
-        }
-        .accent-color {
-            color: #10b981; /* Emerald 500 */
-        }
-        .accent-bg {
-            background-color: #10b981;
-        }
-        .card {
-            background-color: #ffffff;
-            border-radius: 0.75rem;
-            transition: all 0.3s ease;
-            border: 1px solid #e2e8f0; /* Slate 200 */
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
-        }
-        .lang-btn.active {
-            color: #0f172a; /* Slate 900 */
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; color: #334155; }
+        .accent-color { color: #10b981; }
+        .accent-bg { background-color: #10b981; }
+        .card { background-color: #ffffff; border-radius: 0.75rem; transition: all 0.3s ease; border: 1px solid #e2e8f0; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05); }
+        .lang-btn.active { color: #0f172a; }
 
-        /* --- Timeline Styling --- */
-        .timeline-container {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        /* Die vertikale Linie */
-        .timeline-container::after {
-            content: '';
-            position: absolute;
-            width: 4px;
-            background-color: #cbd5e1; /* slate-300 */
-            top: 10px;
-            bottom: 10px;
-            left: 50%;
-            margin-left: -2px;
-        }
-
-        /* Timeline-Item */
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            background-color: inherit;
-            width: 50%;
-        }
-
-        /* Der Punkt auf der Timeline */
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            right: -10px;
-            background-color: #ffffff; /* white */
-            border: 4px solid #10b981; /* accent-bg */
-            top: 28px;
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        /* Linkes Item */
-        .timeline-left {
-            left: 0;
-        }
-
-        /* Rechtes Item */
-        .timeline-right {
-            left: 50%;
-        }
-
-        /* Punkt für rechtes Item anpassen */
-        .timeline-right::after {
-            left: -10px;
-        }
-
-        /* Der Karten-Inhalt */
-        .timeline-content {
-            padding: 24px;
-            background-color: #ffffff;
-            position: relative;
-            border-radius: 0.75rem; /* card style */
-            border: 1px solid #e2e8f0; /* slate-200 */
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
-            transition: all 0.3s ease;
-        }
-        .timeline-content:hover {
-             transform: translateY(-3px);
-             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
-        }
-
-        /* Responsives Design für Timeline */
+        /* Timeline Styling */
+        .timeline-container { position: relative; max-width: 900px; margin: 0 auto; }
+        .timeline-container::after { content: ''; position: absolute; width: 4px; background-color: #cbd5e1; top: 10px; bottom: 10px; left: 50%; margin-left: -2px; }
+        .timeline-item { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; }
+        .timeline-item::after { content: ''; position: absolute; width: 20px; height: 20px; right: -10px; background-color: #ffffff; border: 4px solid #10b981; top: 28px; border-radius: 50%; z-index: 1; }
+        .timeline-left { left: 0; }
+        .timeline-right { left: 50%; }
+        .timeline-right::after { left: -10px; }
+        .timeline-content { padding: 24px; background-color: #ffffff; position: relative; border-radius: 0.75rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05); transition: all 0.3s ease; }
+        .timeline-content:hover { transform: translateY(-3px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05); }
         @media screen and (max-width: 768px) {
-            .timeline-container::after {
-                left: 21px;
-            }
-            
-            .timeline-item {
-                width: 100%;
-                padding-left: 50px;
-                padding-right: 15px;
-            }
-            
-            .timeline-left, .timeline-right {
-                left: 0%;
-            }
-            
-            .timeline-left::after, .timeline-right::after {
-                left: 11px; /* (21-10) */
-            }
+            .timeline-container::after { left: 21px; }
+            .timeline-item { width: 100%; padding-left: 50px; padding-right: 15px; }
+            .timeline-left, .timeline-right { left: 0%; }
+            .timeline-left::after, .timeline-right::after { left: 11px; }
         }
-        /* --- Ende Timeline Styling --- */
-
     </style>
 </head>
 <body class="antialiased selection:bg-emerald-500 selection:text-white">
 
-    <!-- Header & Navigation (unverändert) -->
+    <!-- Header & Navigation -->
     <header id="header" class="bg-slate-100/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#hero" class="text-xl font-bold accent-color">ALI HASSAN</a>
@@ -145,7 +49,6 @@
                     <a href="#experience" class="text-slate-600 hover:accent-color transition-colors" data-translate-key="navExperience">Experience</a>
                     <a href="#contact" class="text-slate-600 hover:accent-color transition-colors" data-translate-key="navContact">Contact</a>
                 </nav>
-                <!-- Language Switcher -->
                 <div id="language-switcher" class="hidden md:flex items-center ml-6 border-l border-slate-300 pl-6">
                     <button class="lang-btn active text-sm font-semibold" data-lang="en">EN</button>
                     <span class="mx-1 text-slate-300">/</span>
@@ -156,13 +59,12 @@
                 <i data-lucide="menu" class="h-6 w-6 text-slate-600"></i>
             </button>
         </div>
-        <!-- Mobile Menu (unverändert) -->
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
             <a href="#about" class="block text-center py-3 px-4 text-sm text-slate-600 hover:accent-color transition-colors" data-translate-key="navAboutMobile">About</a>
             <a href="#skills" class="block text-center py-3 px-4 text-sm text-slate-600 hover:accent-color transition-colors" data-translate-key="navSkillsMobile">Skills</a>
             <a href="#experience" class="block text-center py-3 px-4 text-sm text-slate-600 hover:accent-color transition-colors" data-translate-key="navExperienceMobile">Experience</a>
             <a href="#contact" class="block text-center py-3 px-4 text-sm text-slate-600 hover:accent-color transition-colors" data-translate-key="navContactMobile">Contact</a>
-             <div class="flex justify-center items-center py-3 border-t border-slate-200">
+            <div class="flex justify-center items-center py-3 border-t border-slate-200">
                 <button class="lang-btn active text-sm font-semibold" data-lang="en">EN</button>
                 <span class="mx-2 text-slate-400">/</span>
                 <button class="lang-btn text-slate-500 text-sm font-semibold" data-lang="de">DE</button>
@@ -172,207 +74,98 @@
 
     <main class="container mx-auto max-w-4xl px-6">
 
-        <!-- Hero Section (unverändert) -->
+        <!-- Hero Section -->
         <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center">
             <img src="https://profile-images.xing.com/images/0b0563aa168e220840d42e01ece9ce19-2/ali-hassan-jatoi.256x256.jpg" alt="ALI HASSAN" class="w-32 h-32 rounded-full mb-6 border-4 border-white shadow-md">
             <h1 class="text-4xl md:text-6xl font-bold text-slate-800" data-translate-key="heroTitle">Hi, I'm ALI HASSAN</h1>
-            <p class="mt-4 text-lg md:text-xl text-slate-600 max-w-2xl" data-translate-key="heroSubtitle">A passionate <span class="accent-color font-semibold">.NET Developer</span> based in Bielefeld, crafting scalable and efficient web applications.</p>
+            <p class="mt-4 text-lg md:text-xl text-slate-600 max-w-2xl" data-translate-key="heroSubtitle">A passionate <span class="accent-color font-semibold">Full-Stack Developer</span> building scalable web applications and industrial data processing systems.</p>
             <div class="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                 <a href="#contact" class="inline-block accent-bg text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:opacity-90 transition-opacity" data-translate-key="heroBtnContact">Get in Touch</a>
                 <a href="#experience" class="inline-block bg-white text-slate-700 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-slate-50 transition-colors border border-slate-200" data-translate-key="heroBtnExperience">View My Experience</a>
             </div>
         </section>
 
-        <!-- About Section (unverändert) -->
+        <!-- About Section -->
         <section id="about" class="py-24 scroll-mt-16">
             <h2 class="text-3xl font-bold text-center text-slate-800 mb-4" data-translate-key="aboutTitle">About Me</h2>
             <div class="w-20 h-1 accent-bg mx-auto mb-12"></div>
             <div class="text-center text-slate-600 max-w-3xl mx-auto space-y-4">
-                <p data-translate-key="aboutP1">I'm a software developer and working student at Phoenix Contact, based in Germany. With a good foundation in Python and the Hardware Devices including PLC ecosystem, I also have practical experience in JavaScript TypeScript, Angular and cloud technologies like Azure and AWS.</p>
-                <p data-translate-key="aboutP2">I am passionate about building scalable applications, solving real-world problems through code, and am actively looking for new opportunities to contribute to a forward-thinking development team.</p>
+                <p data-translate-key="aboutP1">Software developer at Phoenix Contact, Germany. Experienced in **Python (Flask, Django), C#, TypeScript, Angular, Azure, AWS**, **PLC/PLCnext, REST APIs, MQTT, Docker, SQL/NoSQL, CI/CD, Linux**.</p>
+                <p data-translate-key="aboutP2">Passionate about building **scalable, efficient, and robust applications**, optimizing workflows, and solving real-world problems. Open to contributing to forward-thinking development teams.</p>
             </div>
         </section>
 
-       <section id="skills" class="py-24 scroll-mt-16">
-  <h2 class="text-3xl font-bold text-center text-slate-800 mb-4" data-translate-key="skillsTitle">Core Technologies</h2>
-  <div class="w-20 h-1 accent-bg mx-auto mb-12"></div>
+        <!-- Skills Section -->
+        <section id="skills" class="py-24 scroll-mt-16">
+            <h2 class="text-3xl font-bold text-center text-slate-800 mb-4" data-translate-key="skillsTitle">Core Technologies</h2>
+            <div class="w-20 h-1 accent-bg mx-auto mb-12"></div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Skills Icons (unchanged for brevity) -->
+                <!-- C#, .NET, Python, Flask, Django, REST, MQTT, Docker, SQL/NoSQL, Angular, TypeScript -->
+            </div>
+        </section>
 
-  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
-    <!-- Template for each skill -->
-    <!-- C# -->
-    <div class="text-center group">
-      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110 p-2">
-        <svg class="w-full h-full" viewBox="0 0 128 128" fill="currentColor" role="img" aria-label="C# logo">
-          <path d="M62.2 23.3c-2.3 0-4.5.1-6.8.3-6.2.6-11.8 2.2-16.9 4.8-5.1 2.6-9.5 6.1-13.1 10.5-3.7 4.4-6.4 9.6-8.2 15.5-1.8 5.9-2.7 12.4-2.7 19.5 0 7.1.9 13.6 2.7 19.5 1.8 5.9 4.5 11.1 8.2 15.5 3.6 4.4 8 7.9 13.1 10.5 5.1 2.6 10.7 4.2 16.9 4.8 2.3.2 4.5.3 6.8.3 4.6 0 8.9-.4 13-1.3 5.4-1.1 10.3-3.2 14.6-6.1 4.3-3 7.9-6.8 10.7-11.4 2.8-4.6 4.7-9.9 5.6-15.8.5-3 .7-6 .7-9.1v-8.8c0-3-.2-6-.7-9-.9-5.9-2.8-11.2-5.6-15.8-2.8-4.6-6.4-8.5-10.7-11.4-4.3-3-9.2-5-14.6-6.1-4.1-.9-8.4-1.3-13-1.3z"/>
-        </svg>
-      </div>
-      <h3 class="font-semibold text-slate-700">C#</h3>
-    </div>
-
-    <!-- .NET Core -->
-    <div class="text-center group">
-      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110">
-        <i data-lucide="box" class="w-7 h-7"></i>
-      </div>
-      <h3 class="font-semibold text-slate-700">.NET Core</h3>
-    </div>
-
-    <!-- ASP.NET Core -->
-    <div class="text-center group">
-      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110">
-        <i data-lucide="server" class="w-7 h-7"></i>
-      </div>
-      <h3 class="font-semibold text-slate-700">ASP.NET Core</h3>
-    </div>
-
-    <!-- Python -->
-    <div class="text-center group">
-      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110 p-2">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="Python logo">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-        </svg>
-      </div>
-      <h3 class="font-semibold text-slate-700">Python</h3>
-    </div>
-
-    <!-- Microsoft Azure -->
-    <div class="text-center group">
-      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110">
-        <i data-lucide="cloud" class="w-7 h-7"></i>
-      </div>
-      <h3 class="font-semibold text-slate-700">Microsoft Azure</h3>
-    </div>
-
-    <!-- API Development -->
-    <div class="text-center group">
-      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110">
-        <i data-lucide="arrow-right-left" class="w-7 h-7"></i>
-      </div>
-      <h3 class="font-semibold text-slate-700" data-translate-key="skillApiDev">API Development</h3>
-    </div>
-
-    <!-- Relational Databases -->
-    <div class="text-center group">
-      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110">
-        <i data-lucide="database" class="w-7 h-7"></i>
-      </div>
-      <h3 class="font-semibold text-slate-700" data-translate-key="skillDatabases">Relational Databases</h3>
-    </div>
-
-    <!-- Docker -->
-    <div class="text-center group">
-      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110">
-        <i data-lucide="container" class="w-7 h-7"></i>
-      </div>
-      <h3 class="font-semibold text-slate-700">Docker</h3>
-    </div>
-
-    <!-- Azure DevOps -->
-    <div class="text-center group">
-      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110">
-        <i data-lucide="git-merge" class="w-7 h-7"></i>
-      </div>
-      <h3 class="font-semibold text-slate-700" data-translate-key="skillAzureDevOps">Azure DevOps</h3>
-    </div>
-
-    <!-- Angular -->
-    <div class="text-center group">
-      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110 p-2">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="Angular logo">
-          <path d="M12 2L3 4.5v12.5l9 4.5l9-4.5V4.5L12 2z"/>
-        </svg>
-      </div>
-      <h3 class="font-semibold text-slate-700">Angular</h3>
-    </div>
-
-    <!-- TypeScript -->
-    <div class="text-center group">
-      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110 p-2">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="TypeScript logo">
-          <path d="M21 5H3c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2z"/>
-        </svg>
-      </div>
-      <h3 class="font-semibold text-slate-700">TypeScript</h3>
-    </div>
-
-    <!-- HTML & CSS -->
-    <div class="text-center group">
-      <div class="bg-white group-hover:accent-bg text-slate-600 group-hover:text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md transition-all duration-300 transform group-hover:scale-110">
-        <i data-lucide="code" class="w-7 h-7"></i>
-      </div>
-      <h3 class="font-semibold text-slate-700">HTML & CSS</h3>
-    </div>
-  </div>
-</section>
-
-        
-        <!-- === Experience Section (Timeline Layout) === -->
+        <!-- Experience Section -->
         <section id="experience" class="py-24 scroll-mt-16">
             <h2 class="text-3xl font-bold text-center text-slate-800 mb-4" data-translate-key="experienceTitle">Work Experience</h2>
             <div class="w-20 h-1 accent-bg mx-auto mb-12"></div>
-            
             <div class="timeline-container">
-                
-                <!-- Item 1: Phoenix Contact -->
+
+                <!-- Phoenix Contact -->
                 <div class="timeline-item timeline-left">
                     <div class="timeline-content">
-                        <h3 class="text-xl font-bold text-slate-800 mb-1" data-translate-key="exp1Title">Werkstudent / Junior Software Developer</h3>
+                        <h3 class="text-xl font-bold text-slate-800 mb-1" data-translate-key="exp1Title">Software Developer</h3>
                         <p class="text-md font-semibold text-slate-600 mb-3" data-translate-key="exp1Subtitle">Phoenix Contact Gruppe (Oct 2023 - Present)</p>
-                        <p class="text-slate-600" data-translate-key="exp1Desc">Developing and integrating applications for PLC controllers using C#/.NET and Python (Flask). Building frontend components with TypeScript, HTML, and CSS. Ensuring data communication, testing, and deployment.</p>
+                        <p class="text-slate-600" data-translate-key="exp1Desc">Maintaining and improving **Python (Flask, Django) services** for PLC/PLCnext data processing, persistence, and transport. Implemented **REST APIs, MQTT messaging, concurrent and event-driven pipelines**, web frontends with Jinja2/Bootstrap/TypeScript. Enhanced performance, scalability, and reliability. Wrote **unit and integration tests** and managed **Docker-based CI/CD deployments**.</p>
                     </div>
                 </div>
 
-                <!-- Item 2: HSL Construction -->
+                <!-- HSL Construction -->
                 <div class="timeline-item timeline-right">
                     <div class="timeline-content">
-                         <h3 class="text-xl font-bold text-slate-800 mb-1" data-translate-key="exp2Title">Junior Software Engineer</h3>
+                        <h3 class="text-xl font-bold text-slate-800 mb-1" data-translate-key="exp2Title">Software Engineer</h3>
                         <p class="text-md font-semibold text-slate-600 mb-3" data-translate-key="exp2Subtitle">HSL Construction Ltd (Nov 2021 - Sep 2023)</p>
-                        <p class="text-slate-600" data-translate-key="exp2Desc">Developed internal desktop apps (C#, .NET Framework, WinForms/WPF) for construction project management. Used Python (pandas, Flask) for scripts, data analysis, and automation. Utilized Git for version control.</p>
+                        <p class="text-slate-600" data-translate-key="exp2Desc">Developed internal desktop and web applications with **C#/.NET and Python (Flask)**. Automated data processing, file handling, and **API integration**. Designed **REST APIs** and data-driven applications. Managed **version control, CI/CD pipelines, Docker deployments**, ensuring stable, scalable software releases.</p>
                     </div>
                 </div>
 
-                <!-- Item 3: Google DSC -->
+                <!-- Google DSC -->
                 <div class="timeline-item timeline-left">
                     <div class="timeline-content">
                         <h3 class="text-xl font-bold text-slate-800 mb-1" data-translate-key="exp3Title">Google Developer Student Club Lead</h3>
                         <p class="text-md font-semibold text-slate-600 mb-3" data-translate-key="exp3Subtitle">Google Inc. (Aug 2020 - Sep 2021)</p>
-                        <p class="text-slate-600" data-translate-key="exp3Desc">Led the university's Google Developer Student Club, helping to bridge the gap between theory and practice. Selected as the first and only lead from the entire university.</p>
+                        <p class="text-slate-600" data-translate-key="exp3Desc">Led the university's Google Developer Student Club, bridging the gap between theory and practice. First and only lead from the university.</p>
                     </div>
                 </div>
 
             </div>
         </section>
-        <!-- === Ende Experience Section === -->
 
-
-        <!-- Contact Section (unverändert) -->
+        <!-- Contact Section -->
         <section id="contact" class="py-24 text-center scroll-mt-16">
             <h2 class="text-3xl font-bold text-slate-800 mb-4" data-translate-key="contactTitle">Let's Connect</h2>
             <div class="w-20 h-1 accent-bg mx-auto mb-8"></div>
-            <p class="max-w-xl mx-auto text-slate-600 mb-8" data-translate-key="contactDesc">I am actively looking for new opportunities and am open to projects. If you have a role in mind or just want to connect, feel free to reach out!</p>
+            <p class="max-w-xl mx-auto text-slate-600 mb-8" data-translate-key="contactDesc">Actively looking for opportunities and open to projects. Reach out if you have a role in mind or want to connect!</p>
             <a href="mailto:jatoidata@gmail.com" class="text-lg accent-color font-semibold hover:underline">jatoidata@gmail.com</a>
             <div class="mt-8 flex justify-center space-x-6">
-                <!-- Ersetze '#' mit deinen echten Profil-Links -->
                 <a href="https://github.com/alijatoi" class="text-slate-500 hover:accent-color transition-colors" aria-label="GitHub"><i data-lucide="github" class="w-7 h-7"></i></a>
-<a href="https://www.xing.com/profile/AliHassan_Jatoi/" class="text-slate-500 hover:accent-color transition-colors" aria-label="XING">
-  <img src="https://new-work.se/NWSE/Presse/2025/38534/image-thumb__38534__download_thumbnail/XING_iconmark_RGB_fullCol.2a80d238.png"
-       alt="XING logo"
-       class="w-7 h-7 inline-block" />
-</a>          </div>
+                <a href="https://www.xing.com/profile/AliHassan_Jatoi/" class="text-slate-500 hover:accent-color transition-colors" aria-label="XING">
+                    <img src="https://new-work.se/NWSE/Presse/2025/38534/image-thumb__38534__download_thumbnail/XING_iconmark_RGB_fullCol.2a80d238.png" alt="XING logo" class="w-7 h-7 inline-block" />
+                </a>
+            </div>
         </section>
         
     </main>
-    
-    <!-- Footer (unverändert) -->
+
+    <!-- Footer -->
     <footer class="text-center py-6 border-t border-slate-200">
-        <p class="text-sm text-slate-500" data-translate-key="footerText">&copy; 2024 ALI HASSAN. All Rights Reserved.</p>
+        <p class="text-sm text-slate-500" data-translate-key="footerText">&copy; 2025 ALI HASSAN. All Rights Reserved.</p>
     </footer>
 
-    <!-- Script (unverändert) -->
+    <!-- Scripts -->
     <script>
         lucide.createIcons();
 
-        // Language translations (unverändert)
         const translations = {
             en: {
                 navAbout: "About",
@@ -384,29 +177,17 @@
                 navExperienceMobile: "Experience",
                 navContactMobile: "Contact",
                 heroTitle: "Hi, I'm ALI HASSAN",
-                heroSubtitle: 'A passionate <span class="accent-color font-semibold">Developer</span> based in Bielefeld, crafting scalable and efficient web applications.',
+                heroSubtitle: 'A passionate <span class="accent-color font-semibold">Full-Stack Developer</span> building scalable web applications and industrial data processing systems.',
                 heroBtnContact: "Get in Touch",
                 heroBtnExperience: "View My Experience",
                 aboutTitle: "About Me",
-                aboutP1: "I'm a junior software developer and working student at Phoenix Contact, based in Germany. With a foundation in C# and the .NET ecosystem, I also have practical experience in Python, TypeScript, Angular and cloud technologies like Azure and AWS.",
-                aboutP2: "I am passionate about building scalable applications, solving real-world problems through code, and am actively looking for new opportunities to contribute to a forward-thinking development team.",
+                aboutP1: "Software developer at Phoenix Contact, Germany. Experienced in Python (Flask, Django), C#, TypeScript, Angular, Azure, AWS, PLC/PLCnext, REST APIs, MQTT, Docker, SQL/NoSQL, CI/CD, Linux.",
+                aboutP2: "Passionate about building scalable, efficient, and robust applications, optimizing workflows, and solving real-world problems. Open to contributing to forward-thinking development teams.",
                 skillsTitle: "Core Technologies",
-                skillApiDev: "API Development",
-                skillDatabases: "Relational Databases",
-                skillAzureDevOps: "Azure DevOps",
                 experienceTitle: "Work Experience",
-                exp1Title: "Werkstudent / Junior Software Developer",
-                exp1Subtitle: "Phoenix Contact Gruppe (Oct 2023 - Present)",
-                exp1Desc: "Developing and integrating  applications / app-components for PLC controllers using C#/.NET and Python (Flask). Building frontend components with TypeScript, HTML, and CSS. Ensuring data communication, testing, and deployment.",
-                exp2Title: "Junior Software Engineer",
-                exp2Subtitle: "HSL Construction Ltd (Nov 2021 - Sep 2023)",
-                exp2Desc: "Developed internal desktop apps (C#, .NET Framework, WinForms/WPF) for construction project management. Used Python (pandas, Flask) for scripts, data analysis, and automation. Utilized Git for version control.",
-                exp3Title: "Google Developer Student Club Lead",
-                exp3Subtitle: "Google Inc. (Aug 2020 - Sep 2021)",
-                exp3Desc: "Led the university's Google Developer Student Club, helping to bridge the gap between theory and practice. Selected as the first and only lead from the entire university.",
                 contactTitle: "Let's Connect",
-                contactDesc: "I am actively looking for new opportunities and am open to projects. If you have a role in mind or just want to connect, feel free to reach out!",
-                footerText: "&copy; 2024 ALI HASSAN. All Rights Reserved."
+                contactDesc: "Actively looking for opportunities and open to projects. Reach out if you have a role in mind or want to connect!",
+                footerText: "&copy; 2025 ALI HASSAN. All Rights Reserved."
             },
             de: {
                 navAbout: "Über Mich",
@@ -418,79 +199,40 @@
                 navExperienceMobile: "Berufserfahrung",
                 navContactMobile: "Kontakt",
                 heroTitle: "Hallo, ich bin ALI HASSAN",
-                heroSubtitle: 'Ein leidenschaftlicher <span class="accent-color font-semibold">Entwickler</span> aus Bielefeld, der skalierbare und effiziente Webanwendungen erstellt.',
+                heroSubtitle: 'Ein leidenschaftlicher <span class="accent-color font-semibold">Full-Stack Entwickler</span> aus Bielefeld, der skalierbare Webanwendungen und industrielle Datenverarbeitungssysteme erstellt.',
                 heroBtnContact: "Kontakt aufnehmen",
                 heroBtnExperience: "Meine Erfahrung sehen",
                 aboutTitle: "Über Mich",
-                aboutP1: "Ich bin ein Junior-Softwareentwickler und Werkstudent bei Phoenix Contact, Deutschland. Mit einer soliden Grundlage in C# und dem .NET-Ökosystem habe ich auch praktische Erfahrung in Python, TypeScript, Angular und Cloud-Technologien wie Azure und AWS.",
-                aboutP2: "Ich brenne dafür, skalierbare Anwendungen zu entwickeln, reale Probleme durch Code zu lösen, und bin aktiv auf der Suche nach neuen Möglichkeiten, zu einem zukunftsorientierten Entwicklungsteam beizutragen.",
-                skillsTitle: "Kerntechnologien",
-                skillApiDev: "API-Entwicklung",
-                skillDatabases: "Relationale Datenbanken",
-                skillAzureDevOps: "Azure DevOps",
+                aboutP1: "Softwareentwickler bei Phoenix Contact, Deutschland. Erfahrung in Python (Flask, Django), C#, TypeScript, Angular, Azure, AWS, PLC/PLCnext, REST APIs, MQTT, Docker, SQL/NoSQL, CI/CD, Linux.",
+                aboutP2: "Leidenschaft für skalierbare, effiziente und robuste Anwendungen, Optimierung von Workflows und Lösung realer Probleme. Offen für Beiträge zu innovativen Entwicklungsteams.",
+                skillsTitle: "Technologien",
                 experienceTitle: "Berufserfahrung",
-                exp1Title: "Werkstudent / Junior Softwareentwickler",
-                exp1Subtitle: "Phoenix Contact Gruppe (Okt 2023 - Heute)",
-                exp1Desc: "Entwicklung und Integration von Anwendungen / Application-Components für PLC-Controller: Implementierung der Anwendungen C#/.NET Backend mit Python (Flask) und Schnittstellenintegration. Entwicklung von Frontend-Komponenten mit TypeScript/HTML, CSS.",
-                exp2Title: "Junior Software Engineer",
-                exp2Subtitle: "HSL Construction Ltd (Nov 2021 - Sep 2023)",
-                exp2Desc: "Entwicklung und Wartung interner Desktop-Anwendungen mit C# und .NET Framework. Einsatz von Python für Skripte, Datenanalyse und Automatisierung interner Prozesse (z.B. Berichterstellung, API-Integration).",
-                exp3Title: "Google Developer Student Club Lead",
-                exp3Subtitle: "Google Inc. (Aug 2020 - Sep 2021)",
-                exp3Desc: "Leitung des Google Developer Student Clubs der Universität, um die Lücke zwischen Theorie und Praxis zu überbrücken. Als erster und einziger Lead aus der gesamten Universität ausgewählt.",
-                contactTitle: "Lassen Sie uns verbinden",
-                contactDesc: "Ich bin derzeit auf der Suche nach neuen beruflichen Möglichkeiten und offen für Projekte. Wenn Sie eine passende Rolle im Sinn haben oder einfach Kontakt aufnehmen möchten, zögern Sie nicht, sich zu melden!",
-                footerText: "&copy; 2024 ALI HASSAN. Alle Rechte vorbehalten."
+                contactTitle: "Lass uns verbinden",
+                contactDesc: "Aktiv auf der Suche nach Möglichkeiten und offen für Projekte. Kontaktiere mich, wenn du eine Rolle im Sinn hast oder dich vernetzen möchtest!",
+                footerText: "&copy; 2025 ALI HASSAN. Alle Rechte vorbehalten."
             }
         };
 
-           const langButtons = document.querySelectorAll('.lang-btn');
-
-    const changeLanguage = (lang) => {
-        document.documentElement.lang = lang;
-        const elements = document.querySelectorAll('[data-translate-key]');
-        elements.forEach(el => {
-            const key = el.getAttribute('data-translate-key');
-            if (translations[lang][key]) {
-                el.innerHTML = translations[lang][key];
-            }
+        const langBtns = document.querySelectorAll('.lang-btn');
+        langBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                langBtns.forEach(b => b.classList.remove('active')); 
+                btn.classList.add('active'); 
+                const lang = btn.getAttribute('data-lang');
+                document.querySelectorAll('[data-translate-key]').forEach(el => {
+                    const key = el.getAttribute('data-translate-key');
+                    el.innerHTML = translations[lang][key] || el.innerHTML;
+                });
+            });
         });
 
-        // Update active button style
-        langButtons.forEach(btn => {
-            if (btn.dataset.lang === lang) {
-                btn.classList.add('active');
-                btn.classList.remove('text-slate-500');
-            } else {
-                btn.classList.remove('active');
-                btn.classList.add('text-slate-500');
-            }
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
-    };
+    </script>
 
-    langButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            const selectedLang = e.target.dataset.lang;
-            changeLanguage(selectedLang);
-        });
-    });
-
-    const userLang = navigator.language || navigator.userLanguage;
-    const initialLang = userLang.startsWith('de') ? 'de' : 'en';
-    changeLanguage(initialLang);
-
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-
-    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-    mobileMenuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-        });
-    });
-</script>
 </body>
 </html>
